@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import MovieCards from '../components/MovieCards'
+import Trailer from "../components/Trailer";
 
 let active = 1;
 let pages = [];
@@ -78,7 +79,6 @@ const Movies = () => {
                     </Col>
                 </Row>
             </Container>
-            
         </div>
     )
 }
