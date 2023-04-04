@@ -26,7 +26,7 @@ const NewRelease = () => {
     const total = useRef(0)
 
     async function getMovies(){
-        const res = await axios.get(`http://localhost:3000/movies?_start=9&_limit=10&_sort=release_date&_order=desc`) //sorted by release date, can also be used for upcoming
+        const res = await axios.get(`https://mp2-api-json-server.onrender.com/movies?_start=9&_limit=10&_sort=release_date&_order=desc`) //sorted by release date, can also be used for upcoming
         
         
         setMovies(res.data)
@@ -34,7 +34,7 @@ const NewRelease = () => {
     }
 
     async function getTotalMovies() {
-        const res = await axios.get(`http://localhost:3000/movies`)
+        const res = await axios.get(`https://mp2-api-json-server.onrender.com/movies`)
         setPages(Math.ceil(res.data.length / limit))//to round up if ever the total has remainder when devided by the limit
         // console.log(Math.ceil(res.data.length / limit)); 
     }
